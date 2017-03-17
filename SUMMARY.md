@@ -1,6 +1,5 @@
 # Summary
 
-* [课程目录](README.md)
-* 前言
+* [前言](preface.md)
 	
 
