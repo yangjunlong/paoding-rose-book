@@ -31,7 +31,8 @@ public class UserController {
 		// 返回@开始的字符串，表示将紧跟@之后的字符串显示在页面上 
 		return "@" + new java.util.Date(); 
 	}
-}```
+}
+```
 
 ### 返回一个Velocity页面
 http://127.0.0.1/user/velocity
@@ -43,7 +44,8 @@ public class UserController {
 		// 运行本程序时，请在webapp/views/目录下创建一个名为user-velocity.vm的文件，写上文本字符
 		return "user-velocity";
 	}
-} ```
+}
+```
 
 ### 返回一个JSP页面
 http://127.0.0.1/user/jsp
@@ -54,7 +56,8 @@ public class UserController {
 	// 在webapp/views/目录下创建user-jsp.jsp的文件即可 (UTF-8的)。
 	return "user-jsp"; 
 	}
-} ```
+}
+```
 
 ### 在页面渲染业务数据
 http://127.0.0.1/user/render
@@ -73,7 +76,8 @@ public class UserController {
 		// id=1, name=qieqie.wang 
 		return "user-render"; 
 	}
-} ```
+}
+```
 
 ### 更改控制器映射
 http://127.0.0.1/u/test
@@ -87,7 +91,8 @@ public class UserController {
 	public String test() {
 		return "@" + new java.util.Date(); 
 	}
-} ```
+}
+```
 
 ### 重定向(Redirect)
 http://127.0.0.1/user/redirect
@@ -99,7 +104,8 @@ public class UserController {
 		return "r:/user/test";
 		// 或 r:http://127.0.0.1/user/test 
 	}
-} ```
+}
+```
 
 ### 转发(Forward)
 
@@ -288,7 +294,6 @@ public class UserController {
         return json;
     }
 }
-
 ```
 
 ### 返回XML
@@ -317,7 +322,6 @@ public class UserController {
         return "user-xml";
     }
 }
-
 ```
 
 **views/user-xml.xml**
@@ -354,6 +358,7 @@ public class DocumentInterceptor extends ControllerInterceptorAdapter {
     }
 }
 ```
+
 ```java
 import org.dom4j.Document;
 import org.dom4j.DocumentHelper;
@@ -373,5 +378,4 @@ public class UserController {
         return doc;
     }
 }
-
 ```
