@@ -384,4 +384,4 @@ public class UserController {
 ### 参考
 * [Rose_Code_Fragment_Controller](https://code.google.com/archive/p/paoding-rose/wikis/Rose_Code_Fragment_Controller.wiki)
 * [Rose_Code_Fragment_Controller2](https://code.google.com/archive/p/paoding-rose/wikis/Rose_Code_Fragment_Controller2.wiki)
-[Rose_Code_Fragment_Controller3](https://code.google.com/archive/p/paoding-rose/wikis/Rose_Code_Fragment_Controller3.wiki)
+* [Rose_Code_Fragment_Controller3](https://code.google.com/archive/p/paoding-rose/wikis/Rose_Code_Fragment_Controller3.wiki)
