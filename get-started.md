@@ -5,7 +5,7 @@
 ### 基础环境
 * Java运行环境：`java version "1.8.0_92"`
 * Rose开发包
-* Tomcat、Resin或其他WEB容器
+* Tomcat、Resin或其他WEB容器(Jetty)
 * Java编辑器IDE，如Eclipse `Version: Neon Release (4.6.0)`
 * Maven: `Apache Maven 3.3.9`
 
@@ -53,8 +53,24 @@ Maven对一个项目定义了固定的默认目录定义：
   		<artifactId>paoding-rose-scanning</artifactId>
   		<version>1.1.1</version>
   	</dependency>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-core</artifactId>
+      <version>3.1.3.RELEASE</version>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-beans</artifactId>
+      <version>3.1.3.RELEASE</version>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-webmvc</artifactId>
+      <version>3.2.4.RELEASE</version>
+    </dependency>
 </dependencies>
 ```
+默认情况下，Rose依赖的spring版本比较低，上面配置spring版本为3.x以避免编译发布到jetty容器时报错。
 
 上述是rose环境最基础的依赖包。再添加一点常见的编译设置：
 
@@ -68,47 +84,44 @@ Maven对一个项目定义了固定的默认目录定义：
 		</resource>
     </resources>
     <plugins>
-    	<!-- 编译使用1.6 -->
-        <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-compiler-plugin</artifactId>
-            <version>2.5.1</version>
-            <configuration>
-                <source>1.6</source>
-                <target>1.6</target>
-                <fork>true</fork>
-                <verbose>true</verbose>
-                <encoding>UTF-8</encoding>
-                <compilerArguments>
-                   war
-                	<sourcepath>
-                        src/main/java
-                    </sourcepath>
-                </compilerArguments>
-            </configuration>
-        </plugin>
-        <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-war-plugin</artifactId>
-            <version>2.0.2</version>
-           	<configuration>
-                <webResources>
-                    <resource>
-                        <filtering>true</filtering>
-                        <directory>src/main/webapp/WEB-INF
-                        </directory>
-                        <includes>
-                            <include>**/*.txt</include>
-                            <include>**/*.xml</include>
-                            <include>**/*.properties</include>
-                        </includes>
-                        <excludes>
-                            <exclude>/static</exclude>
-                        </excludes>
-                        <targetPath>WEB-INF</targetPath>
-                    </resource>
-                </webResources>
-            </configuration>
+    	<plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.1</version>
+        <configuration>
+          <source>1.7</source>
+          <target>1.7</target>
+          <fork>true</fork>
+          <verbose>true</verbose>
+          <encoding>UTF-8</encoding>
+          <compilerArguments>
+            <sourcepath>
+              ${project.basedir}/src/main/java
+            </sourcepath>
+          </compilerArguments>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-war-plugin</artifactId>
+        <version>2.0.2</version>
+        <configuration>
+          <webResources>
+            <resource>
+              <filtering>true</filtering>
+              <directory>src/main/webapp/WEB-INF</directory>
+              <includes>
+                <include>**/*.txt</include>
+                <include>**/*.xml</include>
+                <include>**/*.properties</include>
+              </includes>
+              <excludes>
+                <exclude>/static</exclude>
+                </excludes>
+                <targetPath>WEB-INF</targetPath>
+            </resource>
+          </webResources>
+        </configuration>
         </plugin>
         <plugin>
         	<groupId>org.apache.maven.plugins</groupId>
@@ -130,7 +143,6 @@ Maven对一个项目定义了固定的默认目录定义：
     			<reload>manual</reload>
     			<war>target/rose-example-0.0.1-SNAPSHOT.war</war>
     			<webAppSourceDirectory>target/rose-example-0.0.1-SNAPSHOT</webAppSourceDirectory>
-    			<contextXml>src/main/resources/jetty-context.xml</contextXml>
     			<connectors>
     				<connector 
     					implementation="org.eclipse.jetty.server.nio.SelectChannelConnector">
@@ -240,6 +252,13 @@ public class HelloController {
   }
 }
 ```
+
+### 编译发布
+进入项目的根目录
+```
+$ mvn jetty:run
+```
+访问：http://127.0.0.1:8088/ 页面输出Hello World! 表示成功
 
 ### 参考
 * [rose手册第二章：配置与使用](http://www.54chen.com/java-ee/rose-manual-2.html)
