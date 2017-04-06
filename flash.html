@@ -1,0 +1,395 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Flash支持 · Paoding Rose 文档</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        <meta name="author" content="sobird">
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="http-param.html" />
+    
+    
+    <link rel="prev" href="error-handler.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    框架介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="principle.html">
+            
+                <a href="principle.html">
+            
+                    
+                    原理概要
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="get-started.html">
+            
+                <a href="get-started.html">
+            
+                    
+                    快速开始
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="invocation.html">
+            
+                <a href="invocation.html">
+            
+                    
+                    Invocation对象使用说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="code-fragment-controller.html">
+            
+                <a href="code-fragment-controller.html">
+            
+                    
+                    控制器代码书写示例片段
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="file-upload.html">
+            
+                <a href="file-upload.html">
+            
+                    
+                    文件上传
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="interceptor.html">
+            
+                <a href="interceptor.html">
+            
+                    
+                    拦截器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="error-handler.html">
+            
+                <a href="error-handler.html">
+            
+                    
+                    ErrorHandler支持
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.9" data-path="flash.html">
+            
+                <a href="flash.html">
+            
+                    
+                    Flash支持
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="http-param.html">
+            
+                <a href="http-param.html">
+            
+                    
+                    自定义http参数支持
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Flash支持</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="flash&#x652F;&#x6301;">Flash&#x652F;&#x6301;</h1>
+<pre><code>&#x5386;&#x53F2;&#x4E0A;&#xFF0C;&#x505A;web&#x7684;&#x9700;&#x6C42;&#x65F6;&#xFF0C;&#x7ECF;&#x5E38;&#x9047;&#x5230;&#x4E00;&#x4E2A;&#x60C5;&#x51B5;&#xFF1A;&#x5728;A&#x9875;&#x9762;&#x4FEE;&#x6539;/&#x6DFB;&#x52A0;/&#x5220;&#x9664;&#x4E86;&#x4FE1;&#x606F;&#xFF0C;&#x63D0;&#x4EA4;&#xFF0C;&#x63D0;&#x793A;&#x201C;&#x4FEE;&#x6539;/&#x6DFB;&#x52A0;/&#x5220;&#x9664;&#x6210;&#x529F;&#xFF01;&#x201D;&#x3002;
+Rose&#x7684;flash&#xFF08;&#x5E76;&#x975E;&#x4F60;&#x6240;&#x60F3;&#x8C61;&#x7684;adobe&#x7684;flash&#xFF09;&#x5EFA;&#x8BBE;&#x6027;&#x5730;&#x4F7F;&#x8FD9;&#x4E00;&#x9700;&#x6C42;&#x5728;&#x5F00;&#x53D1;&#x8FC7;&#x7A0B;&#x4E2D;&#x7B80;&#x5355;&#x5FEB;&#x6377;&#x5316;&#x3002;
+</code></pre><h4 id="&#x4F7F;&#x7528;&#x8FC7;&#x7A0B;">&#x4F7F;&#x7528;&#x8FC7;&#x7A0B;</h4>
+<p>&#x4F7F;&#x7528;&#x8FC7;&#x7A0B;&#x4F1A;&#x5F88;&#x6109;&#x5FEB;&#xFF0C;&#x5728;&#x4E24;&#x4E2A;action&#x4E4B;&#x95F4;&#xFF0C;&#x901A;&#x8FC7;return &quot;r:/xxx&quot;&#x6765;&#x8DF3;&#x8F6C;&#xFF08;&#x5B9E;&#x9645;&#x662F;301&#xFF09;&#xFF0C;
+&#x53EA;&#x9700;&#x8981;&#x5728;&#x7B2C;&#x4E00;&#x4E2A;action&#x91CC;&#x4F7F;&#x7528;flash.put&#xFF0C;&#x5728;&#x7B2C;&#x4E8C;&#x4E2A;action&#x91CC;&#x4F7F;&#x7528;flash.get&#x5373;&#x53EF;&#x3002;</p>
+<pre><code class="lang-java">    <span class="hljs-meta">@Get</span>(<span class="hljs-string">&quot;/flash1&quot;</span>)  
+    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">flashStep1</span><span class="hljs-params">(Flash flash)</span> </span>{  
+        flash.add(<span class="hljs-string">&quot;msg&quot;</span>, <span class="hljs-string">&quot;&#x4FEE;&#x6539;&#x6210;&#x529F;&#xFF01;&quot;</span>);  
+        <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;r:/flash2&quot;</span>;  
+    }  
+
+    <span class="hljs-meta">@Get</span>(<span class="hljs-string">&quot;/flash2&quot;</span>)  
+    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">flashStep2</span><span class="hljs-params">(Invocation inv, Flash flash)</span> </span>{  
+        inv.addModel(<span class="hljs-string">&quot;info&quot;</span>, flash.get(<span class="hljs-string">&quot;msg&quot;</span>));  
+        <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;flash&quot;</span>;  
+    }
+</code></pre>
+<p>&#x4E0A;&#x8FF0;&#x4E24;&#x4E2A;action&#x4E2D;&#xFF0C;&#x5F53;&#x8BBF;&#x95EE;flash1&#x65F6;&#xFF0C;&#x4E00;&#x53E5;flash&#x4FE1;&#x606F;&#x88AB;&#x5199;&#x5165;&#xFF0C;&#x5FEB;&#x901F;&#x8DF3;&#x8F6C;&#x5230;flash2&#x7684;&#x5730;&#x5740;&#x3002;
+flash2&#x5730;&#x5740;&#x4E2D;&#x63A5;&#x6536;&#x5230;&#x8FD9;&#x4E2A;flash&#x4FE1;&#x606F;&#x540E;&#x5199;&#x5230;model&#x4E2D;&#x3002;
+&#x8FD8;&#x9700;&#x8981;&#x5728;flash2&#x7684;&#x6A21;&#x677F;&#x91CC;&#x53BB;&#x663E;&#x793A;&#x8FD9;&#x4E2A;&#x53D8;&#x91CF;</p>
+<pre><code class="lang-jsp">&lt;%@ page contentType=<span class="hljs-string">&quot;text/html;charset=UTF-8&quot;</span>%&gt;
+&#x63D0;&#x793A;&#x4FE1;&#x606F;&#xFF1A;${info}
+</code></pre>
+<p>&#x6CE8;&#xFF1A;flash&#x529F;&#x80FD;&#x5229;&#x7528;&#x4E86;&#x6D4F;&#x89C8;&#x5668;&#x7684;cookies&#x529F;&#x80FD;&#xFF0C;&#x5982;&#x679C;&#x7528;&#x6237;&#x7684;&#x73AF;&#x5883;&#x4E0D;&#x80FD;&#x4F7F;&#x7528;cookies&#x5C06;&#x4E0D;&#x4F1A;&#x6709;&#x4EFB;&#x4F55;&#x6548;&#x679C;&#x3002;</p>
+<h3 id="&#x53C2;&#x8003;">&#x53C2;&#x8003;</h3>
+<ul>
+<li><a href="http://www.54chen.com/java-ee/rose-3-6.html" target="_blank">controller&#x5C42;&#xFF1A;&#x4E00;&#x95EA;&#x800C;&#x8FC7;&#x7684;&#x4FE1;&#x606F;&#xFF0C;flash&#x652F;&#x6301;</a> </li>
+</ul>
+<footer class="page-footer"><span class="copyright">Copyright &#xA9; sobird.me 2017 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x8BE5;&#x6587;&#x4EF6;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
+2017-04-05 15:28:28
+</span></footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="error-handler.html" class="navigation navigation-prev " aria-label="Previous page: ErrorHandler支持">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="http-param.html" class="navigation navigation-next " aria-label="Next page: 自定义http参数支持">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Flash支持","level":"1.9","depth":1,"next":{"title":"自定义http参数支持","level":"1.10","depth":1,"path":"http-param.md","ref":"http-param.md","articles":[]},"previous":{"title":"ErrorHandler支持","level":"1.8","depth":1,"path":"error-handler.md","ref":"error-handler.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","splitter","tbfed-pagefooter","github","edit-link"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy sobird.me 2017","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"github":{"url":"https://github.com/yangjunlong/paoding-rose-book/tree/master"},"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"edit-link":{"label":"编辑该页","base":"https://github.com/yangjunlong/paoding-rose-book/edit/master"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"sobird","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Paoding Rose 文档","language":"zh-hans","links":{"sidebar":{}},"gitbook":"3.2.2","description":"Paoding Rose 文档教程整理"},"file":{"path":"flash.md","mtime":"2017-04-05T07:28:28.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-04-06T03:11:08.042Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-edit-link/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

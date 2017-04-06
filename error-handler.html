@@ -1,0 +1,522 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>ErrorHandler支持 · Paoding Rose 文档</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        <meta name="author" content="sobird">
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="flash.html" />
+    
+    
+    <link rel="prev" href="interceptor.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    框架介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="principle.html">
+            
+                <a href="principle.html">
+            
+                    
+                    原理概要
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="get-started.html">
+            
+                <a href="get-started.html">
+            
+                    
+                    快速开始
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="invocation.html">
+            
+                <a href="invocation.html">
+            
+                    
+                    Invocation对象使用说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="code-fragment-controller.html">
+            
+                <a href="code-fragment-controller.html">
+            
+                    
+                    控制器代码书写示例片段
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="file-upload.html">
+            
+                <a href="file-upload.html">
+            
+                    
+                    文件上传
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="interceptor.html">
+            
+                <a href="interceptor.html">
+            
+                    
+                    拦截器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.8" data-path="error-handler.html">
+            
+                <a href="error-handler.html">
+            
+                    
+                    ErrorHandler支持
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="flash.html">
+            
+                <a href="flash.html">
+            
+                    
+                    Flash支持
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="http-param.html">
+            
+                <a href="http-param.html">
+            
+                    
+                    自定义http参数支持
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >ErrorHandler支持</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="errorhandler&#x652F;&#x6301;">ErrorHandler&#x652F;&#x6301;</h1>
+<h4 id="errorhandler&#x7684;&#x4F5C;&#x7528;">ErrorHandler&#x7684;&#x4F5C;&#x7528;</h4>
+<p>&#x4E00;&#x822C;&#x6765;&#x8BF4;&#x4F20;&#x7EDF;&#x7684;&#x7F16;&#x7A0B;&#x90FD;&#x4F1A;&#x5230;&#x5904;&#x53BB;try&#xFF0C;&#x7279;&#x522B;&#x662F;java&#x91CC;&#xFF0C;try&#x6765;try&#x53BB;&#x7684;&#xFF08;&#x5982;&#x679C;&#x4F60;&#x7528;erlang&#x4E00;&#x5B9A;&#x5C31;&#x77E5;&#x9053;&#xFF0C;&#x5DF2;&#x7ECF;&#x77E5;&#x9053;&#x7684;&#x53EF;&#x80FD;&#x6027;&#xFF0C;&#x600E;&#x4E48;&#x80FD;&#x53EB;&#x5F02;&#x5E38;&#xFF1F;&#x90FD;try&#x4E86;&#x8FD8;&#x662F;&#x8BA9;&#x5B83;&#x5D29;&#x4E86;&#x7B97;&#x4E86;&#x3002;&#x3002;&#x3002;&#xFF09;&#x3002;</p>
+<p>&#x5982;&#x679C;&#x6253;&#x5F00;&#x4F60;&#x7684;&#x9879;&#x76EE;&#xFF0C;&#x6BCF;&#x4E2A;java&#x6587;&#x4EF6;&#x4E2D;&#x7684;&#x4EE3;&#x7801;&#x90FD;&#x6709;&#x4E00;&#x5806;&#x7684;try&#xFF0C;&#x90A3;&#x8FD9;&#x65F6;&#x5019;&#x5C31;&#x662F;ErrorHandle&#x4E0A;&#x9635;&#x7684;&#x65F6;&#x5019;&#x4E86;&#x3002;</p>
+<p>ErrorHanle&#x81F4;&#x529B;&#x4E8E;&#xFF1A;&#x7EDF;&#x4E00;&#x6355;&#x6349;&#x548C;&#x5904;&#x7406;&#x5404;&#x79CD;&#x5F02;&#x5E38;&#xFF0C;&#x53EF;&#x533A;&#x5206;&#x5BF9;&#x5F85;&#x548C;&#x8FD4;&#x56DE;&#xFF1B;&#x7EDF;&#x4E00;&#x7684;&#x51FA;&#x9519;&#x4F53;&#x9A8C;&#x3002;</p>
+<p>&#x975E;&#x5E38;&#x7C7B;&#x4F3C;&#x505A;web&#x5F00;&#x53D1;&#x65F6;&#x7684;500&#x7EDF;&#x4E00;&#x51FA;&#x9519;&#x9875;&#x9762;&#x8FD9;&#x6837;&#x7684;&#x4E1C;&#x4E1C;&#x3002;</p>
+<h4 id="&#x793A;&#x4F8B;">&#x793A;&#x4F8B;</h4>
+<pre><code class="lang-java"><span class="hljs-keyword">package</span> com.xiaonei.rose.usage.controllers;
+
+<span class="hljs-keyword">import</span> net.paoding.rose.web.ControllerErrorHandler;
+<span class="hljs-keyword">import</span> net.paoding.rose.web.Invocation;
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ErrorHandler</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">ControllerErrorHandler</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> Object <span class="hljs-title">onError</span><span class="hljs-params">(Invocation inv, Throwable ex)</span> <span class="hljs-keyword">throws</span> Throwable </span>{
+        <span class="hljs-comment">// TODO logger.error(&quot;handle err:&quot;, ex);</span>
+        <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;@error&quot;</span>;
+    }
+}
+</code></pre>
+<h4 id="&#x653E;&#x5728;&#x54EA;&#x91CC;&#x624D;&#x80FD;&#x751F;&#x6548;&#xFF1F;">&#x653E;&#x5728;&#x54EA;&#x91CC;&#x624D;&#x80FD;&#x751F;&#x6548;&#xFF1F;</h4>
+<ul>
+<li>&#x653E;&#x5728;controllers&#x76EE;&#x5F55;&#x4E0B;&#xFF0C;&#x548C;controller&#x4EEC;&#x5728;&#x4E00;&#x8D77;&#xFF08;&#x5E78;&#x798F;&#x5FEB;&#x4E50;&#x5730;&#x751F;&#x6D3B;&#xFF09;&#x3002;</li>
+<li>&#x4E00;&#x822C;&#x6765;&#x8BB2;&#xFF0C;ErrorHandler&#x90FD;&#x662F;&#x7528;&#x5728;web&#x9879;&#x76EE;&#x91CC;&#xFF0C;&#x5728;&#x6700;&#x5916;&#x5C42;&#x8D77;&#x4F5C;&#x7528;&#x3002;</li>
+<li>&#x6240;&#x6709;&#x7684;&#x65B9;&#x6CD5;&#x90FD;&#x53EF;&#x4EE5;&#x5C3D;&#x60C5;&#x5730;&#x5411;throws Exception&#x4E86;&#x3002;</li>
+<li>&#x4E0D;&#x9700;&#x8981;&#x518D;try&#x3002;</li>
+</ul>
+<h4 id="&#x8BB0;&#x5F55;&#x9519;&#x8BEF;&#x65E5;&#x5FD7;--&#x4F7F;&#x7528;&#x4E13;&#x95E8;&#x7684;&#x9519;&#x8BEF;&#x9875;&#x9762;&#x63D0;&#x793A;&#x7528;&#x6237;">&#x8BB0;&#x5F55;&#x9519;&#x8BEF;&#x65E5;&#x5FD7; &amp; &#x4F7F;&#x7528;&#x4E13;&#x95E8;&#x7684;&#x9519;&#x8BEF;&#x9875;&#x9762;&#x63D0;&#x793A;&#x7528;&#x6237;</h4>
+<pre><code class="lang-java"><span class="hljs-comment">// &#x76F4;&#x63A5;&#x653E;&#x5728;controllers&#x6216;&#x5176;&#x5B50;package&#x4E0B;(&#x4E5F;&#x53EF;&#x4EE5;&#x653E;&#x5230;&#x5176;&#x4ED6;package&#x4E0B;&#xFF0C;&#x4F46;&#x9700;&#x8981;applicationContext&#x914D;&#x7F6E;)</span>
+
+<span class="hljs-keyword">package</span> com.xiaonei.rose.usage.controllers;
+<span class="hljs-keyword">import</span> net.paoding.rose.web.ControllerErrorHandler;
+<span class="hljs-keyword">import</span> net.paoding.rose.web.Invocation;
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ErrorHandler</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">ControllerErrorHandler</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> Object <span class="hljs-title">onError</span><span class="hljs-params">(Invocation inv, Throwable ex)</span> </span>{
+        Log logger = LogFactory.getLog(inv.getControllerClass());
+        logger.error(<span class="hljs-string">&quot;&quot;</span>, ex);
+        <span class="hljs-comment">// forward to webapp/views/500.jsp</span>
+        <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;/views/500.jsp&quot;</span>;
+    }
+}
+</code></pre>
+<h4 id="&#x901A;&#x8FC7;code&#x63D0;&#x793A;&#x4E0D;&#x540C;&#x7684;&#x9519;&#x8BEF;&#x4FE1;&#x606F;">&#x901A;&#x8FC7;code&#x63D0;&#x793A;&#x4E0D;&#x540C;&#x7684;&#x9519;&#x8BEF;&#x4FE1;&#x606F;</h4>
+<pre><code class="lang-java"><span class="hljs-keyword">import</span> net.paoding.rose.web.ControllerErrorHandler;
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ErrorHandler</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">ControllerErrorHandler</span> </span>{
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> Object <span class="hljs-title">onError</span><span class="hljs-params">(Invocation inv, Throwable ex)</span> </span>{
+        <span class="hljs-keyword">if</span> (ex <span class="hljs-keyword">instanceof</span> BizException) {
+            BizException bizEx = (BizException) ex;
+            String code = bizEx.getCode();
+            <span class="hljs-comment">// &#x5728;&#x63A7;&#x5236;&#x5668;&#x6240;&#x5728;&#x7684;package&#x4E2D;&#x6216;WEB-INF&#x76EE;&#x5F55;&#x4E0B;&#x914D;&#x7F6E;messages.xml&#xFF0C;</span>
+            <span class="hljs-comment">// &#x53EF;&#x914D;&#x7F6E;&#x591A;&#x4E2A;&#xFF0C;&#x4F18;&#x5148;&#x627E;&#x63A7;&#x5236;&#x5668;&#x81EA;&#x5DF1;package&#x7684;&#xFF0C;&#x7136;&#x540E;&#x662F;&#x7236;package&#x7684;&#xFF0C;&#x6700;&#x540E;&#x662F;WEB-INF&#x7684;</span>
+            <span class="hljs-comment">// messages.xml&#x683C;&#x5F0F;&#x53C2;&#x8003;&#x5728;&#x4E0B;&#x9762;</span>
+            MessageSource msgSource = inv.getApplicationContext();
+            String msg = msgSource.getMessage(code, bizEx.getArgs(), inv.getRequest().getLocale());
+            <span class="hljs-comment">// &#x5728;jsp&#x4E2D;&#x4F7F;&#x7528;${errorMsg}&#x8F93;&#x51FA;&#x8BE5;&#x9519;&#x8BEF;</span>
+            inv.addModel(<span class="hljs-string">&quot;errorMsg&quot;</span>, msg); 
+            <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;/views/biz-500.jsp&quot;</span>;
+        }
+
+        Log logger = LogFactory.getLog(inv.getControllerClass());
+        logger.error(<span class="hljs-string">&quot;&quot;</span>, ex);
+        <span class="hljs-comment">// forward to webapp/views/500.jsp</span>
+        <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;/views/500.jsp&quot;</span>;
+    }
+}
+</code></pre>
+<p><strong>messages.xml&#x683C;&#x5F0F;&#x53C2;&#x8003;</strong></p>
+<pre><code class="lang-xml"><span class="php"><span class="hljs-meta">&lt;?</span>xml version=<span class="hljs-string">&quot;1.0&quot;</span> encoding=<span class="hljs-string">&quot;UTF-8&quot;</span><span class="hljs-meta">?&gt;</span></span>
+<span class="hljs-meta">&lt;!DOCTYPE properties SYSTEM &quot;http://java.sun.com/dtd/properties.dtd&quot;&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">properties</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">comment</span>&gt;</span>Rhyme<span class="hljs-tag">&lt;/<span class="hljs-name">comment</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">entry</span> <span class="hljs-attr">key</span>=<span class="hljs-string">&quot;seven-eight&quot;</span>&gt;</span>lay them straight<span class="hljs-tag">&lt;/<span class="hljs-name">entry</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">entry</span> <span class="hljs-attr">key</span>=<span class="hljs-string">&quot;five-six&quot;</span>&gt;</span>pick up sticks<span class="hljs-tag">&lt;/<span class="hljs-name">entry</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">entry</span> <span class="hljs-attr">key</span>=<span class="hljs-string">&quot;nine-ten&quot;</span>&gt;</span>a big, fat hen<span class="hljs-tag">&lt;/<span class="hljs-name">entry</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">entry</span> <span class="hljs-attr">key</span>=<span class="hljs-string">&quot;three-four&quot;</span>&gt;</span>shut the door<span class="hljs-tag">&lt;/<span class="hljs-name">entry</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">entry</span> <span class="hljs-attr">key</span>=<span class="hljs-string">&quot;one-two&quot;</span>&gt;</span>buckle my shoe<span class="hljs-tag">&lt;/<span class="hljs-name">entry</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">properties</span>&gt;</span>
+</code></pre>
+<h4 id="&#x66F4;&#x597D;&#x7684;&#x533A;&#x5206;">&#x66F4;&#x597D;&#x7684;&#x533A;&#x5206;</h4>
+<pre><code class="lang-java"><span class="hljs-keyword">import</span> net.paoding.rose.web.ControllerErrorHandler;
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ErrorHandler</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">ControllerErrorHandler</span> </span>{
+    <span class="hljs-comment">// @since 0.9.4 </span>
+    <span class="hljs-comment">// &#x628A;&#x65B9;&#x6CD5;&#x7B2C;2&#x4E2A;&#x53C2;&#x6570;&#x6362;&#x4E0A;&#x5177;&#x4F53;&#x7684;&#x5F02;&#x5E38;&#x7C7B;...&#x8FD9;&#x4E2A;onError&#x5C31;&#x53EA;&#x5904;&#x7406;&#x6240;&#x58F0;&#x660E;&#x7684;&#x8FD9;&#x7C7B;&#x5F02;&#x5E38;</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> Object <span class="hljs-title">onError</span><span class="hljs-params">(Invocation inv, BizException bizEx)</span> </span>{
+        <span class="hljs-comment">// &#x7565;&#x53BB;&#x5177;&#x4F53;&#x7684;&#x5904;&#x7406;&#x4EE3;&#x7801;......</span>
+        <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;/views/biz-500.jsp&quot;</span>;
+    }
+
+    <span class="hljs-comment">// &#x901A;&#x7528;onError&#x65B9;&#x6CD5;&#xFF0C;&#x5904;&#x7406;&#x5176;&#x4ED6;onError&#x65E0;&#x6CD5;&#x5904;&#x7406;&#x7684;&#x5F02;&#x5E38;</span>
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> Object <span class="hljs-title">onError</span><span class="hljs-params">(Invocation inv, Throwable ex)</span> </span>{
+        <span class="hljs-comment">// &#x7565;&#x53BB;&#x5177;&#x4F53;&#x7684;&#x5904;&#x7406;&#x4EE3;&#x7801;......</span>
+        <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;/views/500.jsp&quot;</span>;
+    }
+}
+</code></pre>
+<h4 id="&#x5C06;&#x5F02;&#x5E38;&#x8BA9;&#x6E21;&#x7ED9;&#x4E0A;&#x7EA7;&#x6A21;&#x5757;&#x7684;&#x9519;&#x8BEF;&#x5904;&#x7406;&#x5668;&#x5904;&#x7406;">&#x5C06;&#x5F02;&#x5E38;&#x8BA9;&#x6E21;&#x7ED9;&#x4E0A;&#x7EA7;&#x6A21;&#x5757;&#x7684;&#x9519;&#x8BEF;&#x5904;&#x7406;&#x5668;&#x5904;&#x7406;</h4>
+<ol>
+<li><p>controllers&#x81EA;&#x5DF1;&#x6216;&#x5176;&#x5B50;package&#x4E0B;&#x90FD;&#x53EF;&#x4EE5;&#x62E5;&#x6709;&#x72EC;&#x7ACB;&#x7684;ControllerErrorHandler&#x3002;
+&#x5982;&#x679C;&#x5728;web&#x8C03;&#x7528;&#x8FC7;&#x7A0B;&#x4E2D;&#xFF0C;&#x63A7;&#x5236;&#x5668;&#x3001;&#x62E6;&#x622A;&#x5668;&#x7B49;&#x53D1;&#x751F;&#x5F02;&#x5E38;&#x65F6;&#xFF0C;&#x5982;&#x679C;&#x7ED9;&#x5B9A;&#x7684;module&#x542B;&#x6709;&#x81EA;&#x5DF1;ControllerErrorHanlder&#x65F6;&#xFF0C;&#x5219;&#x7531;&#x4ED6;&#x5904;&#x7406;&#xFF1B;&#x5982;&#x679C;&#x81EA;&#x5DF1;&#x6CA1;&#x6709;&#x5219;&#x8C03;&#x7528;&#x4E0A;&#x7EA7;&#x7684;ControllerErrorHandler&#x5904;&#x7406;&#x3002;</p>
+</li>
+<li><p>&#x4F46;&#x662F;&#x5982;&#x679C;&#x6240;&#x5728;&#x7684;module&#x6709;ControllerErrorHandler&#xFF0C;&#x5982;&#x4F55;&#x5728;&#x6709;&#x5FC5;&#x8981;&#x7684;&#x65F6;&#x5019;&#x5C06;&#x5F02;&#x5E38;&#x629B;&#x7ED9;&#x4E0A;&#x7EA7;&#x7684;ControllerErrorHandler&#x5462;&#xFF1F;</p>
+</li>
+</ol>
+<pre><code class="lang-java"><span class="hljs-keyword">package</span> com.xiaonei.rose.usage.controllers.error;
+
+<span class="hljs-keyword">import</span> net.paoding.rose.web.ControllerErrorHandler;
+<span class="hljs-keyword">import</span> net.paoding.rose.web.Invocation;
+<span class="hljs-keyword">import</span> net.paoding.rose.web.ParentErrorHandler;
+<span class="hljs-keyword">import</span> org.springframework.beans.factory.annotation.Autowired;
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ErrorHandler</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">ControllerErrorHandler</span> </span>{
+    <span class="hljs-comment">// &#x58F0;&#x660E;ParentErrorHandler,&#x6CE8;&#x610F;&#xFF0C;&#x8FD9;&#x91CC;&#x4E0D;&#x662F;ControllerErrorHandler</span>
+    <span class="hljs-comment">// &#x4E07;&#x4E00;&#x4E0A;&#x7EA7;&#x6CA1;&#x6709;ControllerErrorHandler, &#x8FD9;&#x4E2A;&#x5B57;&#x6BB5;&#x4E5F;&#x4E0D;&#x4F1A;&#x4E3A;&#x7A7A;</span>
+    <span class="hljs-meta">@Autowired</span>
+    ParentErrorHandler parent;
+    <span class="hljs-comment">// &#x5904;&#x7406;&#x8FD9;&#x4E2A;&#x5904;&#x7406;&#x5668;&#x53EA;&#x60F3;&#x5904;&#x7406;&#x7684;</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> Object <span class="hljs-title">onError</span><span class="hljs-params">(Invocation inv, RuntimeException ex)</span> <span class="hljs-keyword">throws</span> Throwable </span>{
+        System.out.println(<span class="hljs-string">&quot;---------RuntimeException----------&quot;</span>);
+        inv.getResponse().getWriter().write(<span class="hljs-string">&quot;&lt;pre&gt;RuntimeException&lt;br&gt;&quot;</span>);
+        ex.printStackTrace(inv.getResponse().getWriter());
+        inv.getResponse().getWriter().write(<span class="hljs-string">&quot;&lt;/pre&gt;&quot;</span>);
+        <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;&quot;</span>;
+    }
+
+    <span class="hljs-comment">// &#x901A;&#x7528;&#x7684;&#x5F02;&#x5E38;&#x629B;&#x7ED9;&#x4E0A;&#x7EA7;ControllerErrorHanlder&#x6216;&#x4E0A;&#x7EA7;&#x7684;&#x4E0A;&#x7EA7;&#x53BB;&#x5904;&#x7406;</span>
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> Object <span class="hljs-title">onError</span><span class="hljs-params">(Invocation inv, Throwable ex)</span> <span class="hljs-keyword">throws</span> Throwable </span>{
+        <span class="hljs-keyword">return</span> parent.onError(inv, ex);
+    }
+}
+</code></pre>
+<p>&#x4EE5;&#x4E0A;parentErrorHanlder&#x7684;&#x903B;&#x8F91;&#xFF0C;Rose&#x63D0;&#x4F9B;&#x7684;ErrorHandlerAdpater&#x7C7B;&#x5DF2;&#x7ECF;&#x5C01;&#x88C5;&#x4E86;
+&#x5EFA;&#x8BAE;&#x60A8;&#x901A;&#x8FC7;extends ErrorHandlerAdapter &#x5B9E;&#x73B0;&#x9519;&#x8BEF;&#x5904;&#x7406;&#x5668;&#xFF0C;&#x800C;&#x975E;&#x76F4;&#x63A5;&#x5B9E;&#x73B0;ControllerErrorHandler</p>
+<ul>
+<li>&#x5904;&#x7406;&#x8FD9;&#x4E2A;&#x5904;&#x7406;&#x5668;&#x53EA;&#x60F3;&#x5904;&#x7406;&#x7684;</li>
+<li>&#x901A;&#x7528;&#x7684;&#x9ED8;&#x8BA4;&#x5C31;&#x4F1A;&#x629B;&#x7ED9;&#x4E0A;&#x7EA7;&#x6A21;&#x5757;&#x7684;&#x9519;&#x8BEF;&#x5904;&#x7406;&#x5668;&#x5904;&#x7406;</li>
+</ul>
+<pre><code class="lang-java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ErrorHandler</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">ErrorHandlerAdapter</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> Object <span class="hljs-title">onError</span><span class="hljs-params">(Invocation inv, RuntimeException ex)</span> <span class="hljs-keyword">throws</span> Throwable </span>{
+        System.out.println(<span class="hljs-string">&quot;---------RuntimeException----------&quot;</span>);
+        inv.getResponse().getWriter().write(<span class="hljs-string">&quot;&lt;pre&gt;RuntimeException&lt;br&gt;&quot;</span>);
+        ex.printStackTrace(inv.getResponse().getWriter());
+        inv.getResponse().getWriter().write(<span class="hljs-string">&quot;&lt;/pre&gt;&quot;</span>);
+        <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;&quot;</span>;
+    }
+}
+</code></pre>
+<h3 id="&#x53C2;&#x8003;">&#x53C2;&#x8003;</h3>
+<ul>
+<li><a href="https://code.google.com/archive/p/paoding-rose/wikis/Rose_Code_Fragment_ErrorHandler.wiki" target="_blank">Rose_Code_Fragment_ErrorHandler</a></li>
+<li><a href="http://www.54chen.com/java-ee/rose-3-3.html" target="_blank">controller&#x5C42;&#xFF1A;ErrorHandler&#x652F;&#x6301;</a> </li>
+</ul>
+<footer class="page-footer"><span class="copyright">Copyright &#xA9; sobird.me 2017 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x8BE5;&#x6587;&#x4EF6;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
+2017-04-05 15:16:52
+</span></footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="interceptor.html" class="navigation navigation-prev " aria-label="Previous page: 拦截器">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="flash.html" class="navigation navigation-next " aria-label="Next page: Flash支持">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"ErrorHandler支持","level":"1.8","depth":1,"next":{"title":"Flash支持","level":"1.9","depth":1,"path":"flash.md","ref":"flash.md","articles":[]},"previous":{"title":"拦截器","level":"1.7","depth":1,"path":"interceptor.md","ref":"interceptor.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","splitter","tbfed-pagefooter","github","edit-link"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy sobird.me 2017","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"github":{"url":"https://github.com/yangjunlong/paoding-rose-book/tree/master"},"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"edit-link":{"label":"编辑该页","base":"https://github.com/yangjunlong/paoding-rose-book/edit/master"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"sobird","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Paoding Rose 文档","language":"zh-hans","links":{"sidebar":{}},"gitbook":"3.2.2","description":"Paoding Rose 文档教程整理"},"file":{"path":"error-handler.md","mtime":"2017-04-05T07:16:52.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-04-06T03:11:08.042Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-edit-link/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
