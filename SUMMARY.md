@@ -8,3 +8,5 @@
 * [文件上传](file-upload.md)
 * [拦截器](interceptor.md)
 * [ErrorHandler支持](error-handler.md)
+* [Flash支持](flash.md)
+* [自定义http参数支持](http-param.md)
