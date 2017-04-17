@@ -13,3 +13,4 @@
 * [自定义http参数支持](http-param.md)
 * [统一的参数验证办法](param-validator.md)
 * [如何在已有的web应用中使用Rose](other-web-fw.md)
+* [接入fis-velocity-tools工具包](fis-velocity-tools.md)
