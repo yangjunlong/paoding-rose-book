@@ -2,6 +2,11 @@
 
 	fis-velocity-tools 是百度前端技术团队开发的针对服务端为 JAVA + Velocity 的前端集成解决方案后端工具包。
 
+**版本要求**
+* fis-velocity-tools: `2.11`+
+* velocity: `1.7`+
+* paoding-rose: `1.2.0`+
+
 #### Rose + fis-velocity-tools 整合
 
 `webapp/WEB-INF` 目录下新建：`fis.properties`、`velocity.properties`
